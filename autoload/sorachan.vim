@@ -298,7 +298,7 @@ function! s:loop(timer)
   endif
 endfunction
 
-function! Sorachan()
+function! sorachan#Sorachan()
   call s:createWin()
   let s:stop=0
   let s:index=0
