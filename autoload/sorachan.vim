@@ -9,6 +9,8 @@ hi! mouth ctermbg=lightred ctermfg=black
 hi! cloth ctermbg=208 ctermfg=208
 hi! skirt ctermbg=black ctermfg=black
 hi! skin ctermbg=lightred ctermfg=lightred
+hi! heart ctermfg=89
+hi! star ctermfg=yellow
 let s:s=500
 let s:index=0
 let s:stop=0
@@ -106,7 +108,7 @@ let s:image5=[
       \"                                        ",
       \"                                        ",
       \"       ##     ##                        ",
-      \"       #=#    #=#                       ",
+      \"    ♥  #=#    #=#                       ",
       \"      ############                      ",
       \"     ##############                     ",
       \"     ###=>====<=###                     ",
@@ -120,7 +122,7 @@ let s:image5=[
 let s:image6=[
       \"                                        ",
       \"                                        ",
-      \"                                        ",
+      \"    ♥                                   ",
       \"                                        ",
       \"          ##     ##                     ",
       \"          #=#    #=#                    ",
@@ -139,7 +141,7 @@ let s:image6=[
       \"                                        ",
       \"                                        "]
 let s:image7=[
-      \"                                        ",
+      \" ♥                                      ",
       \"                                        ",
       \"             ##     ##                  ",
       \"             #=#    #=#                 ",
@@ -232,7 +234,7 @@ let s:image11=[
       \"                                        ",
       \"                                        ",
       \"                    ##     ##           ",
-      \"                   #=#    #=#           ",
+      \"                   #=#    #=#   ★       ",
       \"                  ############          ",
       \"                 ##############         ",
       \"                 ###=>====<=###         ",
@@ -247,7 +249,7 @@ let s:image12=[
       \"                                        ",
       \"                                        ",
       \"                                        ",
-      \"                                        ",
+      \"                                   ★    ",
       \"                 ##     ##              ",
       \"                #=#    #=#              ",
       \"               ############             ",
@@ -288,6 +290,8 @@ function! s:setColor()
   call matchadd("cloth","_")
   call matchadd("skirt","-")
   call matchadd("skin","=")
+  call matchadd("heart","♥")
+  call matchadd("star","★")
 endfunction
 
 function! s:loop(timer)
